@@ -13,5 +13,36 @@
   "tags": {
     "language": "C#",
     "type": "project"
+  },
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net6.0",
+          "description": "Target net6.0"
+        }
+      ],
+      "replaces": "net6.0",
+      "defaultValue": "net6.0"
+    },
+    "Avalonia Version": {
+      "type": "parameter",
+      "description": "The target version of Avalonia NuGet packages.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "0.10.18",
+          "description": "Target 0.10.18 (Latest stable)."
+        },
+        {
+          "choice": "11.0.0-preview1",
+          "description": "Target 11.0.0-preview1"
+        }
+      ],
+      "defaultValue": "0.10.18"
+    }
   }
 }
