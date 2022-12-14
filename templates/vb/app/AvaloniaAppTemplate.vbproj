@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>AvaloniaAppTemplate</RootNamespace>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TrimmerRootDescriptor Include="Roots.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="AvaloniaVersionTemplateParameter" />
+    <PackageReference Include="Avalonia.Desktop" Version="AvaloniaVersionTemplateParameter" />
+    <!--#if (!AvaloniaStableChosen) -->
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="AvaloniaVersionTemplateParameter" />
+    <!--#endif -->
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="AvaloniaVersionTemplateParameter" />
+  </ItemGroup>
+</Project>
