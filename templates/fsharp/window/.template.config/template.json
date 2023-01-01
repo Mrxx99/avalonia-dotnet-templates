@@ -22,5 +22,11 @@
   "tags": {
     "language": "F#",
     "type": "item"
+  },
+  "constraints": {
+    "fsharp-only": {
+      "type": "project-capability",
+      "args": "FSharp"
+    }
   }
 }

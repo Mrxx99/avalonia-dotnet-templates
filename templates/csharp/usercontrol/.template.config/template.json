@@ -23,5 +23,11 @@
   "tags": {
     "language": "C#",
     "type": "item"
+  },
+  "constraints": {
+    "csharp-only": {
+      "type": "project-capability",
+      "args": "CSharp"
+    }
   }
 }
