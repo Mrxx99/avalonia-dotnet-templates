@@ -10,9 +10,12 @@ Public Class App
     End Sub
 
     Public Overrides Sub OnFrameworkInitializationCompleted()
+
         If TypeOf ApplicationLifetime Is IClassicDesktopStyleApplicationLifetime Then
+
             Dim desktop As IClassicDesktopStyleApplicationLifetime = ApplicationLifetime
             desktop.MainWindow = New MainWindow()
+            
         End If
 
         MyBase.OnFrameworkInitializationCompleted()

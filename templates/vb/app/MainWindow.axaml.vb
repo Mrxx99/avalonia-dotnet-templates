@@ -12,8 +12,10 @@ Public Class MainWindow
     Public Sub InitializeComponent()
         AvaloniaXamlLoader.Load(Me)
 
+'-:cnd:noEmit
 #If DEBUG Then
         Me.AttachDevTools()
 #End If
+'+:cnd:noEmit
     End Sub
 End Class
