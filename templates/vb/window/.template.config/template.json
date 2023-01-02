@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "AvaloniaUI",
+  "classifications": [ "Desktop", "Xaml", "Avalonia", "Windows", "Linux", "macOS" ],
+  "defaultName": "Window",
+  "groupidentity": "Avalonia.Window",
+  "identity": "Avalonia.Window.VB",
+  "name": "Avalonia Window",
+  "primaryOutputs": [
+    { "path": "NewWindow.axaml.vb" },
+    { "path": "NewWindow.axaml" }
+  ],
+  "shortName": "avalonia.window",
+  "sourceName": "NewWindow",
+  "symbols": {
+    "DefaultNamespace": {
+      "type": "bind",
+      "binding": "msbuild:RootNamespace",
+      "replaces": "AvaloniaAppTemplate.Namespace"
+    }
+  },
+  "tags": {
+    "language": "VB",
+    "type": "item"
+  }
+}
