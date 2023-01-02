@@ -22,7 +22,7 @@ Avalonia .NET Core MVVM App          avalonia.mvvm              [C#],F#   Deskto
 Avalonia Cross Platform Application  avalonia.xplat             [C#],F#   Desktop/Xaml/Avalonia/Web/Mobile
 Avalonia Resource Dictionary         avalonia.resource                    Desktop/Xaml/Avalonia/Windows/Linux/macOS
 Avalonia Styles                      avalonia.styles                      Desktop/Xaml/Avalonia/Windows/Linux/macOS
-Avalonia TemplatedControl            avalonia.templatedcontrol  [C#]      Desktop/Xaml/Avalonia/Windows/Linux/macOS
+Avalonia TemplatedControl            avalonia.templatedcontrol  [C#],F#   Desktop/Xaml/Avalonia/Windows/Linux/macOS
 Avalonia UserControl                 avalonia.usercontrol       [C#],F#   Desktop/Xaml/Avalonia/Windows/Linux/macOS
 Avalonia Window                      avalonia.window            [C#],F#   Desktop/Xaml/Avalonia/Windows/Linux/macOS
 ```
@@ -41,7 +41,15 @@ dotnet new avalonia.app -o MyApp
 
 Available parameters:
 
-``-A, --AvaloniaVersion``
+``-f, --framework``
+
+*Description*: The target framework for the project.
+
+*Options*: **net6.0**, **net7.0**
+
+*By default*: net6.0
+
+``-av, --avalonia-version``
 
 *Description*: The target version of Avalonia NuGet packages.
 
@@ -62,7 +70,15 @@ dotnet new avalonia.mvvm -o MyApp
 
 Available parameters:
 
-``-A, --AvaloniaVersion``
+``-f, --framework``
+
+*Description*: The target framework for the project.
+
+*Options*: **net6.0**, **net7.0**
+
+*By default*: net6.0
+
+``-av, --avalonia-version``
 
 *Description*: The target version of Avalonia NuGet packages.
 
@@ -70,7 +86,7 @@ Available parameters:
 
 *By default*: 0.10.18
 
-``-M, --MVVMToolkit``
+``-m, --mvvm``
 
 *Description*: MVVM toolkit to use in the template.
 
