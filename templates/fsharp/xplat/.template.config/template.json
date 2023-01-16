@@ -28,6 +28,12 @@
       "replaces": "FrameworkParameter",
       "defaultValue": "net7.0"
     },
+    "skipRestore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "If specified, skips the automatic restore of the project on create.",
+      "defaultValue": "false"
+    },
     "HostIdentifier": {
       "type": "bind",
       "binding": "HostIdentifier"
@@ -49,6 +55,19 @@
     }
   ],
   "postActions": [
+    {
+      "id": "restore",
+      "condition": "(!skipRestore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        { "text": "Run 'dotnet restore'" }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "args": {
+        "files": "0;1" // this does not work, see here: https://github.com/dotnet/templating/issues/5922
+      },
+      "continueOnError": true
+    },
     {
       "id": "editor",
       "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
