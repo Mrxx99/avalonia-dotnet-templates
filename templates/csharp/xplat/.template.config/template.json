@@ -12,7 +12,7 @@
   "defaultName": "AvaloniaApplication",
   "tags": {
     "language": "C#",
-    "type": "project"
+    "type": "solution"
   },
   "symbols": {
     "Framework": {
@@ -33,6 +33,25 @@
       "binding": "HostIdentifier"
     }
   },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(HostIdentifier == \"dotnetcli\" ||  HostIdentifier == \"dotnetcli-preview\")",
+          "rename": {
+            "AvaloniaTest.app.sln": "AvaloniaTest.sln" // rename required to not confuse VS
+          }
+        }
+      ]
+    }
+  ],
+  "guids": [
+    "EBFA8512-1EA5-4D8C-B4AC-AB5B48A6D568",
+    "ABC31E74-02FF-46EB-B3B2-4E6AE43B456C",
+    "1C1A049E-235C-4CD0-B6FA-D53AC418F4DA",
+    "EBD9022F-BC83-4846-9A11-6F7F3772DC64",
+    "7AD1DAC8-7FBE-49D5-8614-7321233DB82E"
+  ],
   "primaryOutputs": [
     { "path": "AvaloniaTest/AvaloniaTest.csproj" },
     { "path": "AvaloniaTest.Android/AvaloniaTest.Android.csproj" },

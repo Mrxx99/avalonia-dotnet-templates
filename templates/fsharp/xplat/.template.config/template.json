@@ -10,7 +10,7 @@
   "defaultName": "AvaloniaApplication",
   "tags": {
     "language": "F#",
-    "type": "project"
+    "type": "solution"
   },
   "sourceName": "AvaloniaTest",
   "preferNameDirectory": true,
@@ -33,19 +33,31 @@
       "binding": "HostIdentifier"
     }
   },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
+          "exclude": [
+            "AvaloniaTest.sln"
+          ]
+        }
+      ]
+    }
+  ],
   "primaryOutputs": [
-    { "path": "AvaloniaTest/AvaloniaTest.fsproj" },
-    { "path": "AvaloniaTest.Android/AvaloniaTest.Android.fsproj" },
-    { "path": "AvaloniaTest.Desktop/AvaloniaTest.Desktop.fsproj" },
-    { "path": "AvaloniaTest.iOS/AvaloniaTest.iOS.fsproj" },
-    { "path": "AvaloniaTest.Web/AvaloniaTest.Web.fsproj" },
+    { "path": "AvaloniaTest/AvaloniaTest/AvaloniaTest.fsproj" },
+    { "path": "AvaloniaTest/AvaloniaTest.Android/AvaloniaTest.Android.fsproj" },
+    { "path": "AvaloniaTest/AvaloniaTest.Desktop/AvaloniaTest.Desktop.fsproj" },
+    { "path": "AvaloniaTest/AvaloniaTest.iOS/AvaloniaTest.iOS.fsproj" },
+    { "path": "AvaloniaTest/AvaloniaTest.Web/AvaloniaTest.Web.fsproj" },
     {
       "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
-      "path": "AvaloniaTest/ViewModels/MainViewModel.fs"
+      "path": "AvaloniaTest/AvaloniaTest/ViewModels/MainViewModel.fs"
     },
     {
       "condition": "(HostIdentifier != \"dotnetcli\" && HostIdentifier != \"dotnetcli-preview\")",
-      "path": "AvaloniaTest/Views/MainView.axaml"
+      "path": "AvaloniaTest/AvaloniaTest/Views/MainView.axaml"
     }
   ],
   "postActions": [
