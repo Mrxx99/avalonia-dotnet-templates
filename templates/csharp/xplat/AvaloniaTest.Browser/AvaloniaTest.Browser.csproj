@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <WasmExtraFilesToDeploy Include="AppBundle\**" />
+    <WasmExtraFilesToDeploy Include="AppBundle\**">
+      <TargetPath>%(RecursiveDir)%(Filename)%(Extension)</TargetPath>
+    </WasmExtraFilesToDeploy>
   </ItemGroup>
 
   <ItemGroup>
