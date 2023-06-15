@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "AvaloniaUI",
+  "classifications": [ "Desktop", "Xaml", "Avalonia", "Windows", "Linux", "macOS" ],
+  "defaultName": "nuget.config",
+  "description": "A nuget.config file containing nightly feeds for Avalonia UI",
+  "identity": "Avalonia.NugetConfig",
+  "name": "Avalonia Nuget.Config",
+  "primaryOutputs": [
+    { "path": "nuget.config" }
+  ],
+  "shortName": "avalonia.nugetconfig",
+  "sourceName": "nuget.config",
+  "tags": {
+    "type": "item"
+  },
+  "UseUnsafeAllFeed": {
+    "type": "parameter",
+    "description": "Uses the \"All builds\" feed instead of the nightly feed. Contains PR builds (potentially from UNTRUSTED source).",
+    "datatype": "bool",
+    "displayName": "Use \"All builds\" feed",
+    "defaultValue": "false"
+  }
+}
